@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 79cc89f09cba06d47a5841e27586e7ea
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - spriteRenderer: {instanceID: 0}
+  - lookAway: {fileID: 21300000, guid: deb4f497a25f8a14dabc35ac71f5f76e, type: 3}
+  - lookFwd: {fileID: 21300000, guid: 439dac30bde9cd646922466b69325e39, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

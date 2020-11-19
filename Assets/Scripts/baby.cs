@@ -16,6 +16,9 @@ public class baby : MonoBehaviour
     //int readValue = 0;
     private GameObject theMando;
 
+    //check if the flex sensor has been pressed already
+    public bool flexOn = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,32 +37,45 @@ public class baby : MonoBehaviour
 
         int analogVal = u.analogRead(AnalogPin.A0);
 
-        // if baby's arm is lifting up
-        if(analogVal >= 125)
+        // has the flex sensor been pressed already?
+        if(flexOn == false)
         {
-            // and Din is looking away
-            if(din.spriteRenderer.sprite = din.lookAway)
+            // if baby's arm is lifting up
+            if(analogVal >= 125 || Input.GetKeyDown("space"))
             {
-                // add to eggs eaten
-                score.scoreVal += 1;
+                // and Din is looking away
+                if(din.spriteRenderer.sprite = din.lookAway)
+                {
+                    // add to eggs eaten
+                    score.scoreVal += 1;
+                    if(score.scoreVal == 10)
+                    {
+                        // if you eat 10 eggs, you win
+                        SceneManager.LoadScene("Win", LoadSceneMode.Additive);
+                    }
+                }
+                // else, if din IS looking at baby
+                else if (din.spriteRenderer.sprite = din.lookFwd)
+                {
+                    // you lose
+                    SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
+                }
 
+                // change bool to true because the flex sensor is on now
+                flexOn = true;
             }
-            // else, if din IS looking at baby
-            else if (din.spriteRenderer.sprite = din.lookFwd)
+        }
+
+        // if flex sensor is flatter again, make bool false
+        if(flexOn == true)
+        {
+            if(analogVal <= 124 || Input.GetKeyUp("space"))
             {
-                SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
+                flexOn = false;
             }
         }
     
-        // else if mando is looking at you
-        // game over
     }
 
-/*
-    void ReadFlex()
-    {
-        //readValue = u.analogRead(AnalogPin.A0,"PinRead");
-        //u.analogWrite(AnalogPin.A3,readValue/6);
-    }
-    */
+
 }

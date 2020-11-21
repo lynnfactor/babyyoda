@@ -57,7 +57,9 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\baby.cs" />
      <Compile Include="Assets\Scripts\mando.cs" />
+     <Compile Include="Assets\Scripts\quit.cs" />
      <Compile Include="Assets\Scripts\score.cs" />
+     <Compile Include="Assets\Scripts\start.cs" />
      <Compile Include="Assets\Uduino\Examples\Advanced\Arduino Mega\MegaReadWrite.cs" />
      <Compile Include="Assets\Uduino\Examples\Advanced\BoardType\ChangeBoardType.cs" />
      <Compile Include="Assets\Uduino\Examples\Advanced\Bundle\Bundle.cs" />

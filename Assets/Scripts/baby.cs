@@ -44,7 +44,7 @@ public class baby : MonoBehaviour
             if(analogVal >= 125 || Input.GetKeyDown("space"))
             {
                 // and Din is looking away
-                if(din.spriteRenderer.sprite = din.lookAway)
+                if(din.isLooking == false)
                 {
                     // add to eggs eaten
                     score.scoreVal += 1;
@@ -55,7 +55,7 @@ public class baby : MonoBehaviour
                     }
                 }
                 // else, if din IS looking at baby
-                else if (din.spriteRenderer.sprite = din.lookFwd)
+                else if (din.isLooking == true)
                 {
                     // you lose
                     SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);

@@ -13,11 +13,10 @@ using UnityEngine.UI;
 public class mando : MonoBehaviour
 {
 
-    public SpriteRenderer spriteRenderer;
-    public Sprite lookAway;
-    public Sprite lookFwd;
-    //public Sprite newImage;
-    //public Image imageComponent;
+    public GameObject lookAway;
+    public GameObject lookFwd;
+
+    public bool isLooking;
 
     public int maxTime = 10;
     public int minTime = 3;
@@ -30,12 +29,26 @@ public class mando : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spriteRenderer.sprite = lookAway;
-        //imageComponent = this.GetComponent<Image>();
-        //imageComponent.sprite = lookAway;
+
+        // mando starts looking away from you
+        lookAway.SetActive(true);
+        lookFwd.SetActive(false);
+
+        isLooking = false;
 
         SetRandomTime();
 
+    }
+
+    // this have a 50/50 chance of changing the boolean to true or false
+    public void random50 (float fChance)
+    {
+        float fRand = Random.Range(0.0f, 1.0f);
+        if (fRand <= fChance)
+        {
+            isLooking = true;
+        }
+        isLooking = false;
     }
 
     void SetRandomTime()
@@ -63,17 +76,17 @@ public class mando : MonoBehaviour
         // check which sprite is loaded
         // then change it to the other one
 
-        if(spriteRenderer.sprite == lookAway)
+        if(isLooking == true)
         {
-            spriteRenderer.sprite = lookFwd;
+            lookAway.SetActive(false);
+            lookFwd.SetActive(true);
         } 
 
-        if (spriteRenderer.sprite == lookFwd)
+        if (isLooking == false)
         {
-            spriteRenderer.sprite = lookAway;
+            lookAway.SetActive(true);
+            lookFwd.SetActive(true);
         }
-
-        Debug.Log("Sprite is " + spriteRenderer.sprite);
 
         SetRandomTime();
     }

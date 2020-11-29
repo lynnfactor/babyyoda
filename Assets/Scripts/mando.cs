@@ -85,7 +85,7 @@ public class mando : MonoBehaviour
         if (isLooking == false)
         {
             lookAway.SetActive(true);
-            lookFwd.SetActive(true);
+            lookFwd.SetActive(false);
         }
 
         SetRandomTime();

@@ -51,14 +51,14 @@ public class baby : MonoBehaviour
                     if(score.scoreVal == 10)
                     {
                         // if you eat 10 eggs, you win
-                        SceneManager.LoadScene("Win", LoadSceneMode.Additive);
+                        SceneManager.LoadScene("Win");
                     }
                 }
                 // else, if din IS looking at baby
                 else if (din.isLooking == true)
                 {
                     // you lose
-                    SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
+                    SceneManager.LoadScene("GameOver");
                 }
 
                 // change bool to true because the flex sensor is on now

@@ -30,4 +30,10 @@ public class start : MonoBehaviour
             SceneManager.LoadScene(scenePaths[1], LoadSceneMode.Single);
         } 
     }
+
+    void ChangeScene()
+    {
+        SceneManager.LoadScene("Main");
+    }
+
 }

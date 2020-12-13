@@ -11,13 +11,13 @@ using UnityEngine.SceneManagement;
 public class start : MonoBehaviour
 {
 
-    private AssetBundle myLoadedAssetBundle;
-    private string[] scenePaths;
+    //private AssetBundle myLoadedAssetBundle;
+    //private string[] scenePaths;
     // Start is called before the first frame update
     void Start()
     {
-        myLoadedAssetBundle = AssetBundle.LoadFromFile("Assets/AssetBundles/scenes");
-        scenePaths = myLoadedAssetBundle.GetAllScenePaths();
+        //myLoadedAssetBundle = AssetBundle.LoadFromFile("Assets/AssetBundles/scenes");
+        //scenePaths = myLoadedAssetBundle.GetAllScenePaths();
     }
 
     // Update is called once per frame
@@ -27,11 +27,11 @@ public class start : MonoBehaviour
 
         if(Input.GetKeyDown("space"))
         {
-            SceneManager.LoadScene(scenePaths[1], LoadSceneMode.Single);
+            ChangeScene();
         } 
     }
 
-    void ChangeScene()
+    public void ChangeScene()
     {
         SceneManager.LoadScene("Main");
     }

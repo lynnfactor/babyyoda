@@ -1937,8 +1937,8 @@ MonoBehaviour:
   lookAway: {fileID: 2126958880}
   lookFwd: {fileID: 1192589340}
   isLooking: 0
-  maxTime: 10
-  minTime: 3
+  maxTime: 5
+  minTime: 1
 --- !u!222 &1668816285
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -8,6 +8,8 @@ using Uduino;
  * 
  * this script allows player to control game with electronics installed in baby yoda
  * Using the Uduino examples for help
+ * 
+ * Attach to player game object
 */
 
 public class baby : MonoBehaviour

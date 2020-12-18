@@ -12,11 +12,7 @@ using UnityEngine.UI;
 
 public class mando : MonoBehaviour
 {
-
-    public GameObject lookAway;
-    public GameObject lookFwd;
-
-    public bool isLooking;
+    public bool isLooking = false;
 
     public int maxTime = 10;
     public int minTime = 3;
@@ -26,68 +22,77 @@ public class mando : MonoBehaviour
     // time to change sprite
     private float changeTime;
 
+    // array to change sprites
+    public Sprite[] lookingSprites;
+
+
     // Start is called before the first frame update
     void Start()
     {
-
-        // mando starts looking away from you
-        lookAway.SetActive(true);
-        lookFwd.SetActive(false);
-
-        isLooking = false;
-
-        SetRandomTime();
-
+        this.GetComponent<SpriteRenderer>().sprite = lookingSprites[0];
     }
 
+    /*
     // this have a 50/50 chance of changing the boolean to true or false
     public void random50 (float fChance)
     {
         float fRand = Random.Range(0.0f, 1.0f);
+
         if (fRand <= fChance)
         {
-            isLooking = true;
+            if(isLooking = false)
+            {
+                isLooking = true;
+            }
+
+            if (isLooking = true)
+            {
+                isLooking = false;
+            }
         }
-        isLooking = false;
+        //isLooking = false;
     }
+    */
 
-    void SetRandomTime()
-    {
-        changeTime = Random.Range(minTime,maxTime);
-        Debug.Log("Change time is " + changeTime);
-
-        FixedUpdate();
-    }
-
-    void FixedUpdate()
+    void Update()
     {
         // count time
-        time += Time.deltaTime;
+        changeTime = Random.Range(minTime, maxTime);
+        Debug.Log("Change sprite in " + changeTime + "seconds");
+
+        //random50(fChance);
+
+        if(time <= changeTime)
+        {
+            time += Time.deltaTime;
+            //Debug.Log("Time is: " + time);
+        }
+
 
         if (time >= changeTime)
         {
-            Debug.Log("Change sprite in " + changeTime + " seconds");
-            ChangeSprite();
+            //ChangeSprite();
+            if (isLooking == true)
+            {
+                Debug.Log("entering true if statement");
+                this.GetComponent<SpriteRenderer>().sprite = lookingSprites[0];
+
+                isLooking = false;
+                time = 0;
+            }
+
+            if (isLooking == false)
+            {
+                Debug.Log("entering false if statement");
+                this.GetComponent<SpriteRenderer>().sprite = lookingSprites[1];
+
+                isLooking = true;
+                time = 0;
+            }
+
         }
-    }
 
-    void ChangeSprite()
-    {
-        // check which sprite is loaded
-        // then change it to the other one
+        Debug.Log("Mando is looking: " + isLooking);
 
-        if(isLooking == true)
-        {
-            lookAway.SetActive(false);
-            lookFwd.SetActive(true);
-        } 
-
-        if (isLooking == false)
-        {
-            lookAway.SetActive(true);
-            lookFwd.SetActive(false);
-        }
-
-        SetRandomTime();
     }
 }

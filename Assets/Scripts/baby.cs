@@ -16,7 +16,7 @@ public class baby : MonoBehaviour
 {
     UduinoManager u;
     //int readValue = 0;
-    private GameObject theMando;
+    public mando theMando;
 
     //check if the flex sensor has been pressed already
     public bool flexOn = false;
@@ -29,13 +29,13 @@ public class baby : MonoBehaviour
         //u.pinMode(AnalogPin.A3, PinMode.Output);
 
         // access variables from mando script
-        theMando = GameObject.Find("Mando");
+        //theMando = GameObject.Find("head");
     }
 
     // Update is called once per frame
     void Update()
     {
-        mando din = theMando.GetComponent<mando>();
+        //mando din = theMando.GetComponent<mando>();
 
         int analogVal = u.analogRead(AnalogPin.A0);
 
@@ -46,18 +46,18 @@ public class baby : MonoBehaviour
             if(analogVal >= 125 || Input.GetKeyDown("space"))
             {
                 // and Din is looking away
-                if(din.isLooking == false)
+                if(theMando.isLooking == false)
                 {
                     // add to eggs eaten
                     score.scoreVal += 1;
-                    if(score.scoreVal == 10)
+                    if(score.scoreVal == 20)
                     {
                         // if you eat 10 eggs, you win
                         SceneManager.LoadScene("Win");
                     }
                 }
                 // else, if din IS looking at baby
-                else if (din.isLooking == true)
+                else if (theMando.isLooking == true)
                 {
                     // you lose
                     SceneManager.LoadScene("GameOver");

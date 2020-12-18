@@ -6,10 +6,14 @@ using UnityEngine.SceneManagement;
 /* created by Aubrey Isaacman
  *
  * this script lets you quit the game and restart the scene
+ * also scene change on button click
 */
 
 public class quit : MonoBehaviour
 {
+
+    [SerializeField] private string scene;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +23,31 @@ public class quit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("r"))
+        if ((Input.GetKey(KeyCode.Q)))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        } else if (Input.GetKeyDown("escape"))
-        {
-            Application.Quit();
+            QuitGame();
         }
+
+        if ((Input.GetKey(KeyCode.R)))
+        {
+            Debug.Log("r pressed");
+            RestartGame();
+        }
+    }
+
+    public void MoveScene(string scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
+
+    void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("quit game");
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

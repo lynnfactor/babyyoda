@@ -29,70 +29,44 @@ public class mando : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // start mando as facing AWAY from you
         this.GetComponent<SpriteRenderer>().sprite = lookingSprites[0];
     }
 
-    /*
-    // this have a 50/50 chance of changing the boolean to true or false
-    public void random50 (float fChance)
-    {
-        float fRand = Random.Range(0.0f, 1.0f);
-
-        if (fRand <= fChance)
-        {
-            if(isLooking = false)
-            {
-                isLooking = true;
-            }
-
-            if (isLooking = true)
-            {
-                isLooking = false;
-            }
-        }
-        //isLooking = false;
-    }
-    */
-
     void Update()
     {
-        // count time
+        // pick a random amount of seconds between the min and max variables you set
         changeTime = Random.Range(minTime, maxTime);
-        Debug.Log("Change sprite in " + changeTime + "seconds");
 
-        //random50(fChance);
-
+        // only increase timer as long as it's less than changeTime
         if(time <= changeTime)
         {
             time += Time.deltaTime;
-            //Debug.Log("Time is: " + time);
         }
 
-
+        // if the timer reaches the changeTime
         if (time >= changeTime)
         {
-            //ChangeSprite();
+            // and mando IS looking at you
             if (isLooking == true)
             {
-                Debug.Log("entering true if statement");
+                // change his helmet so he's looking away instead
                 this.GetComponent<SpriteRenderer>().sprite = lookingSprites[0];
-
+                // change the boolean to reflect this change
                 isLooking = false;
+                // and reset the timer for the next round
                 time = 0;
-            }
-
-            if (isLooking == false)
+            } /*but if mando is NOT looking at you*/ else if (isLooking == false)
             {
-                Debug.Log("entering false if statement");
+                // change his helmet so he IS looking at you
                 this.GetComponent<SpriteRenderer>().sprite = lookingSprites[1];
-
+                // change the boolean to reflect this change
                 isLooking = true;
+                // and reset the timer for the next round
                 time = 0;
             }
 
         }
-
-        Debug.Log("Mando is looking: " + isLooking);
 
     }
 }

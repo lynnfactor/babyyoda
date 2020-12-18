@@ -21,15 +21,17 @@ public class baby : MonoBehaviour
     //check if the flex sensor has been pressed already
     public bool flexOn = false;
 
+    public AudioSource burp;
+
     // Start is called before the first frame update
     void Start()
     {
         u = UduinoManager.Instance;
         u.pinMode(AnalogPin.A0, PinMode.Input);
-        //u.pinMode(AnalogPin.A3, PinMode.Output);
 
-        // access variables from mando script
-        //theMando = GameObject.Find("head");
+        // get audio source for burping sound
+        burp = GetComponent<AudioSource>();
+        //burp.Play(0);
     }
 
     // Update is called once per frame
@@ -50,6 +52,8 @@ public class baby : MonoBehaviour
                 {
                     // add to eggs eaten
                     score.scoreVal += 1;
+                    // baby burps
+                    burp.Play();
                     if(score.scoreVal == 20)
                     {
                         // if you eat 10 eggs, you win

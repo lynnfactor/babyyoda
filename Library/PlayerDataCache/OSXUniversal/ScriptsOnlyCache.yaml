@@ -3,12 +3,11 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Uduino.UduinoInterface_Bluetooth
     - Uduino.UduinoInterface_Serial
-    - Uduino.UduinoManager
     - baby
-    - fullscreensprite
     - mando
     - quit
     - score
+    - start
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -56,22 +55,28 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11492}
     - Class: 114
-      Script: {instanceID: 11532}
+      Script: {instanceID: 11546}
     - Class: 114
-      Script: {instanceID: 11682}
+      Script: {instanceID: 11696}
     - Class: 114
-      Script: {instanceID: 12212}
+      Script: {instanceID: 12226}
     - Class: 114
-      Script: {instanceID: 13700}
+      Script: {instanceID: 12934}
     - Class: 114
-      Script: {instanceID: 14334}
+      Script: {instanceID: 13714}
+    - Class: 114
+      Script: {instanceID: 14348}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -88,7 +93,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/Scenes/Main.unity:
+    Assets/Scenes/Start.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -118,49 +123,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11334}
+      Script: {instanceID: 11492}
     - Class: 114
-      Script: {instanceID: 11364}
+      Script: {instanceID: 11496}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11546}
     - Class: 114
-      Script: {instanceID: 11482}
+      Script: {instanceID: 11696}
     - Class: 114
-      Script: {instanceID: 11532}
+      Script: {instanceID: 11720}
     - Class: 114
-      Script: {instanceID: 11636}
+      Script: {instanceID: 12050}
     - Class: 114
-      Script: {instanceID: 11682}
+      Script: {instanceID: 12102}
     - Class: 114
-      Script: {instanceID: 11706}
+      Script: {instanceID: 12226}
     - Class: 114
-      Script: {instanceID: 11998}
+      Script: {instanceID: 12516}
     - Class: 114
-      Script: {instanceID: 12036}
+      Script: {instanceID: 12578}
     - Class: 114
-      Script: {instanceID: 12088}
+      Script: {instanceID: 12934}
     - Class: 114
-      Script: {instanceID: 12212}
+      Script: {instanceID: 13230}
     - Class: 114
-      Script: {instanceID: 12502}
+      Script: {instanceID: 13714}
     - Class: 114
-      Script: {instanceID: 12564}
+      Script: {instanceID: 13818}
     - Class: 114
-      Script: {instanceID: 12920}
+      Script: {instanceID: 14240}
     - Class: 114
-      Script: {instanceID: 13216}
+      Script: {instanceID: 14348}
     - Class: 114
-      Script: {instanceID: 13700}
+      Script: {instanceID: 14384}
     - Class: 114
-      Script: {instanceID: 14142}
-    - Class: 114
-      Script: {instanceID: 14226}
-    - Class: 114
-      Script: {instanceID: 14334}
-    - Class: 114
-      Script: {instanceID: 14370}
-    - Class: 114
-      Script: {instanceID: 14378}
+      Script: {instanceID: 14392}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -168,8 +165,6 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -203,13 +198,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11492}
     - Class: 114
-      Script: {instanceID: 11532}
+      Script: {instanceID: 11546}
     - Class: 114
-      Script: {instanceID: 11682}
+      Script: {instanceID: 11696}
     - Class: 114
-      Script: {instanceID: 13700}
+      Script: {instanceID: 12226}
+    - Class: 114
+      Script: {instanceID: 12934}
+    - Class: 114
+      Script: {instanceID: 13714}
+    - Class: 114
+      Script: {instanceID: 14348}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -217,6 +218,63 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/test.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11152}
+    - Class: 114
+      Script: {instanceID: 11348}
+    - Class: 114
+      Script: {instanceID: 11378}
+    - Class: 114
+      Script: {instanceID: 11492}
+    - Class: 114
+      Script: {instanceID: 11696}
+    - Class: 114
+      Script: {instanceID: 12226}
+    - Class: 114
+      Script: {instanceID: 13714}
+    - Class: 114
+      Script: {instanceID: 14156}
+    - Class: 114
+      Script: {instanceID: 14348}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -265,7 +323,7 @@ ScriptsOnlyBuild:
     className: ButtonTrigger
   - hash:
       serializedVersion: 2
-      Hash: 51177cfa7bb7c6b50a1b13ab263018d1
+      Hash: a9cebea094124ac1c9fb970c580056a3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: mando
@@ -277,7 +335,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 74577603e60385e05880659fa8925662
+      Hash: be5b6791c9b177df14b3e2956dbcdfe8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: baby
@@ -367,7 +425,7 @@ ScriptsOnlyBuild:
     className: UduinoManager
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 4dba252ae000063a286ed04dd3640779
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: quit
@@ -467,12 +525,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: fullscreensprite
   - hash:
       serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
@@ -913,7 +965,8 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 2
   scenePathNames:
-  - Assets/Scenes/Main.unity
+  - Assets/Scenes/Start.unity
+  - Assets/Scenes/test.unity
   - Assets/Scenes/GameOver.unity
   - Assets/Scenes/Win.unity
-  playerPath: /Users/Aubs/Desktop/babyodatest.app
+  playerPath: /Users/Aubs/Desktop/babyeats.app

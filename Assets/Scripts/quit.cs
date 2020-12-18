@@ -28,11 +28,12 @@ public class quit : MonoBehaviour
             QuitGame();
         }
 
+        /*
         if ((Input.GetKey(KeyCode.R)))
         {
             Debug.Log("r pressed");
             RestartGame();
-        }
+        }*/
     }
 
     public void MoveScene(string scene)

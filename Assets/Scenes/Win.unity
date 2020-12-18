@@ -203,9 +203,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1087486273}
-        m_MethodName: MoveScene
-        m_Mode: 5
+      - m_Target: {fileID: 1087486272}
+        m_MethodName: ChangeScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -512,16 +512,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1087486273 stripped
+--- !u!114 &1087486272
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 126642986453068850, guid: 37e8c324abef146f69b8a69fc8b006e1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1087486269}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087486270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aa9fa8248c3dea4fab60f923d0bd14e, type: 3}
+  m_Script: {fileID: 11500000, guid: ef564bdc1e05c7248ae77867dc538bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1368635242

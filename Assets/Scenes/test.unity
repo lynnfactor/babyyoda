@@ -817,7 +817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLooking: 0
-  maxTime: 5
+  maxTime: 6
   minTime: 1
   lookingSprites:
   - {fileID: 21300000, guid: deb4f497a25f8a14dabc35ac71f5f76e, type: 3}

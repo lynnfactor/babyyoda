@@ -11,13 +11,8 @@ using UnityEngine.SceneManagement;
 public class start : MonoBehaviour
 {
 
-    //private AssetBundle myLoadedAssetBundle;
-    //private string[] scenePaths;
-    // Start is called before the first frame update
     void Start()
     {
-        //myLoadedAssetBundle = AssetBundle.LoadFromFile("Assets/AssetBundles/scenes");
-        //scenePaths = myLoadedAssetBundle.GetAllScenePaths();
     }
 
     // Update is called once per frame
@@ -33,7 +28,7 @@ public class start : MonoBehaviour
 
     public void ChangeScene()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("test");
     }
 
 }
